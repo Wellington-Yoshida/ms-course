@@ -30,7 +30,7 @@ public class WorkerController {
         return new ResponseEntity<List<Worker>>(workers, OK);
     }
 
-    @GetMapping(value = "/{id}", consumes = {APPLICATION_JSON_VALUE, APPLICATION_XML_VALUE}, produces = {APPLICATION_JSON_VALUE, APPLICATION_XML_VALUE})
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
         final Optional<Worker> optionalWorker = workerRepository.findById(id);
 
